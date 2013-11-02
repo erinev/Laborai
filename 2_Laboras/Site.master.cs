@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 public partial class SiteMaster : MasterPage
 {
@@ -15,7 +12,7 @@ public partial class SiteMaster : MasterPage
     protected void Page_Init(object sender, EventArgs e)
     {
         // The code below helps to protect against XSRF attacks
-        var requestCookie = Request.Cookies[AntiXsrfTokenKey];
+        HttpCookie requestCookie = Request.Cookies[AntiXsrfTokenKey];
         Guid requestCookieGuidValue;
         if (requestCookie != null && Guid.TryParse(requestCookie.Value, out requestCookieGuidValue))
         {
@@ -44,7 +41,7 @@ public partial class SiteMaster : MasterPage
         Page.PreLoad += master_Page_PreLoad;
     }
 
-    void master_Page_PreLoad(object sender, EventArgs e)
+    private void master_Page_PreLoad(object sender, EventArgs e)
     {
         if (!IsPostBack)
         {
@@ -55,8 +52,8 @@ public partial class SiteMaster : MasterPage
         else
         {
             // Validate the Anti-XSRF token
-            if ((string)ViewState[AntiXsrfTokenKey] != _antiXsrfTokenValue
-                || (string)ViewState[AntiXsrfUserNameKey] != (Context.User.Identity.Name ?? String.Empty))
+            if ((string) ViewState[AntiXsrfTokenKey] != _antiXsrfTokenValue
+                || (string) ViewState[AntiXsrfUserNameKey] != (Context.User.Identity.Name ?? String.Empty))
             {
                 throw new InvalidOperationException("Validation of Anti-XSRF token failed.");
             }
@@ -65,6 +62,5 @@ public partial class SiteMaster : MasterPage
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
     }
 }

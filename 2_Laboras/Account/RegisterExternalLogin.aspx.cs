@@ -1,32 +1,33 @@
 ﻿using System;
 using System.Web;
 using System.Web.Security;
+using System.Web.UI;
 using DotNetOpenAuth.AspNet;
 using Microsoft.AspNet.Membership.OpenAuth;
 
-public partial class Account_RegisterExternalLogin : System.Web.UI.Page
+public partial class Account_RegisterExternalLogin : Page
 {
     protected string ProviderName
     {
-        get { return (string)ViewState["ProviderName"] ?? String.Empty; }
+        get { return (string) ViewState["ProviderName"] ?? String.Empty; }
         private set { ViewState["ProviderName"] = value; }
     }
 
     protected string ProviderDisplayName
     {
-        get { return (string)ViewState["ProviderDisplayName"] ?? String.Empty; }
+        get { return (string) ViewState["ProviderDisplayName"] ?? String.Empty; }
         private set { ViewState["ProviderDisplayName"] = value; }
     }
 
     protected string ProviderUserId
     {
-        get { return (string)ViewState["ProviderUserId"] ?? String.Empty; }
+        get { return (string) ViewState["ProviderUserId"] ?? String.Empty; }
         private set { ViewState["ProviderUserId"] = value; }
     }
 
     protected string ProviderUserName
     {
-        get { return (string)ViewState["ProviderUserName"] ?? String.Empty; }
+        get { return (string) ViewState["ProviderUserName"] ?? String.Empty; }
         private set { ViewState["ProviderUserName"] = value; }
     }
 
@@ -61,30 +62,32 @@ public partial class Account_RegisterExternalLogin : System.Web.UI.Page
         ProviderDisplayName = OpenAuth.GetProviderDisplayName(ProviderName);
 
         // Build the redirect url for OpenAuth verification
-        var redirectUrl = "~/Account/RegisterExternalLogin";
-        var returnUrl = Request.QueryString["ReturnUrl"];
+        string redirectUrl = "~/Account/RegisterExternalLogin";
+        string returnUrl = Request.QueryString["ReturnUrl"];
         if (!String.IsNullOrEmpty(returnUrl))
         {
             redirectUrl += "?ReturnUrl=" + HttpUtility.UrlEncode(returnUrl);
         }
 
         // Verify the OpenAuth payload
-        var authResult = OpenAuth.VerifyAuthentication(redirectUrl);
+        AuthenticationResult authResult = OpenAuth.VerifyAuthentication(redirectUrl);
         if (!authResult.IsSuccessful)
         {
             Title = "External login failed";
             userNameForm.Visible = false;
-            
+
             providerMessage.Text = String.Format("External login {0} failed,", ProviderDisplayName);
-            
+
             // To view this error, enable page tracing in web.config (<system.web><trace enabled="true"/></system.web>) and visit ~/Trace.axd
-            Trace.Warn("OpenAuth", String.Format("There was an error verifying authentication with {0})", ProviderDisplayName), authResult.Error);
+            Trace.Warn("OpenAuth",
+                String.Format("There was an error verifying authentication with {0})", ProviderDisplayName),
+                authResult.Error);
             return;
         }
 
         // User has logged in with provider successfully
         // Check if user is already registered locally
-        if (OpenAuth.Login(authResult.Provider, authResult.ProviderUserId, createPersistentCookie: false))
+        if (OpenAuth.Login(authResult.Provider, authResult.ProviderUserId, false))
         {
             RedirectToReturnUrl();
         }
@@ -117,17 +120,15 @@ public partial class Account_RegisterExternalLogin : System.Web.UI.Page
             return;
         }
 
-        var createResult = OpenAuth.CreateUser(ProviderName, ProviderUserId, ProviderUserName, userName.Text);
+        CreateResult createResult = OpenAuth.CreateUser(ProviderName, ProviderUserId, ProviderUserName, userName.Text);
         if (!createResult.IsSuccessful)
         {
-            
-                userNameMessage.Text = createResult.ErrorMessage;
-                
+            userNameMessage.Text = createResult.ErrorMessage;
         }
         else
         {
             // User created & associated OK
-            if (OpenAuth.Login(ProviderName, ProviderUserId, createPersistentCookie: false))
+            if (OpenAuth.Login(ProviderName, ProviderUserId, false))
             {
                 RedirectToReturnUrl();
             }
@@ -136,7 +137,7 @@ public partial class Account_RegisterExternalLogin : System.Web.UI.Page
 
     private void RedirectToReturnUrl()
     {
-        var returnUrl = Request.QueryString["ReturnUrl"];
+        string returnUrl = Request.QueryString["ReturnUrl"];
         if (!String.IsNullOrEmpty(returnUrl) && OpenAuth.IsLocalUrl(returnUrl))
         {
             Response.Redirect(returnUrl);

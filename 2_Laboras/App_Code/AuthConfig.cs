@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace _2_Laboras
+﻿namespace _2_Laboras
 {
     public static class AuthConfig
     {

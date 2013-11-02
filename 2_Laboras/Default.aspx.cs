@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -9,7 +6,6 @@ public partial class _Default : Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
     }
 
     protected void Bendras(object sender, CommandEventArgs e)
@@ -26,7 +22,7 @@ public partial class _Default : Page
         {
             Response.Write("Stop");
         }
-        else 
+        else
         {
             Response.Write("Nezinoma komanda");
         }
