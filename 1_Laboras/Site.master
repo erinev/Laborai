@@ -18,8 +18,8 @@
     <form runat="server">
     <asp:ScriptManager runat="server">
         <Scripts>
-            <asp:ScriptReference Name="jquery" />
-            <asp:ScriptReference Name="jquery.ui.combined" />
+            <%--<asp:ScriptReference Name="jquery" />
+            <asp:ScriptReference Name="jquery.ui.combined" />--%>
         </Scripts>
     </asp:ScriptManager>
     <header>

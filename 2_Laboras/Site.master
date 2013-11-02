@@ -17,10 +17,10 @@
 <body>
     <form runat="server">
     <asp:ScriptManager runat="server">
-        <Scripts>
-            <asp:ScriptReference Name="jquery" />
-            <asp:ScriptReference Name="jquery.ui.combined" />
-        </Scripts>
+        <%--<Scripts>
+            <asp:ScriptReference Name="jquery.js" />
+            <asp:ScriptReference Name="jquery.ui.combined.js" />
+        </Scripts>--%>
     </asp:ScriptManager>
     <header>
         <div class="content-wrapper">
