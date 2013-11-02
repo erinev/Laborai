@@ -1,4 +1,9 @@
-﻿namespace x
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace x
 {
     public class Class1
     {
