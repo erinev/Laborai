@@ -33,7 +33,7 @@ public partial class Default : Page
         if (!loweCaseExist) return;
 
         bool numberExist = CheckIfStringContainsNumber(inputValue);
-        if (numberExist) return;
+        if (!numberExist) return;
 
         args.IsValid = true;
     }
