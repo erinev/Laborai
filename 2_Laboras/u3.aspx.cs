@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
-public partial class u3 : System.Web.UI.Page
+public partial class U3 : Page
 {
-    public string[] GautiGerimuMasyva()
+    private string[] GautiGerimuMasyva()
     {
         var gerimuMasyvas = new string[4];
         gerimuMasyvas[0] = "Sultys";

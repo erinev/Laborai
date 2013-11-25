@@ -1,14 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Globalization;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
-public partial class SecondLevel : System.Web.UI.Page
+public partial class SecondLevel : Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        MessageLabel.Visible = true;
+        ResultLabel.Visible = true;
 
+        int sum = PreviousPage.FirstNumber + PreviousPage.SecondNumber;
+        ResultLabel.Text = sum.ToString(CultureInfo.InvariantCulture);
     }
 }

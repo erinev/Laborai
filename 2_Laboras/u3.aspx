@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="u3.aspx.cs" Inherits="u3" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="u3.aspx.cs" Inherits="U3" %>
 
 <!DOCTYPE html>
 
