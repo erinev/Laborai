@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="SecondLevel.aspx.cs" Inherits="SecondLevel" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="SecondLevel.aspx.cs" Inherits="SecondLevel" EnableEventValidation="false" %>
 <%@ PreviousPageType VirtualPath="~/FirstLevel.aspx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">

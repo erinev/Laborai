@@ -6,10 +6,13 @@ public partial class SecondLevel : Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        MessageLabel.Visible = true;
-        ResultLabel.Visible = true;
+        if (Page.PreviousPage != null)
+        {
+            MessageLabel.Visible = true;
+            ResultLabel.Visible = true;
 
-        int sum = PreviousPage.FirstNumber + PreviousPage.SecondNumber;
-        ResultLabel.Text = sum.ToString(CultureInfo.InvariantCulture);
+            int sum = PreviousPage.FirstNumber + PreviousPage.SecondNumber;
+            ResultLabel.Text = sum.ToString(CultureInfo.InvariantCulture);
+        }
     }
 }

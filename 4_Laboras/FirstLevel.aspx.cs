@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Web.UI;
-using Microsoft.AspNet.FriendlyUrls;
 
 public partial class FirstLevel : Page
 {
@@ -28,7 +27,8 @@ public partial class FirstLevel : Page
             return secondNumber;
         }
     }
-    protected void CountButton_Click(object sender, EventArgs e)
+
+    protected void CountButton_Click1(object sender, EventArgs e)
     {
         Response.Redirect("SecondLevel.aspx");
     }

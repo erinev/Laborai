@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="FirstLevel.aspx.cs" Inherits="FirstLevel" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="FirstLevel.aspx.cs" Inherits="FirstLevel" EnableEventValidation="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
     <form method="GET">    
@@ -25,7 +25,7 @@
             <tr>
                 <td style="width: 188px">&nbsp;</td>
                 <td>
-                    <asp:Button ID="CountButton" runat="server" Text="Skaičiuoti" />
+                    <asp:Button ID="CountButton" runat="server" Text="Skaičiuoti" OnClick="CountButton_Click1"/>
                 </td>
             </tr>
         </table>
