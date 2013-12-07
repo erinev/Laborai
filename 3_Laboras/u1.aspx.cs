@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Drawing;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class U1 : System.Web.UI.Page
+public partial class U1 : Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -14,8 +15,8 @@ public partial class U1 : System.Web.UI.Page
     private void CreateHtmlTable()
     {
         table.Controls.Clear();
-        int rowsNumber = Convert.ToInt32(5);
-        int columnsNumber = Convert.ToInt32(3);
+        const int rowsNumber = 5;
+        const int columnsNumber = 3;
 
         for (int i = 0; i < rowsNumber; i++)
         {
