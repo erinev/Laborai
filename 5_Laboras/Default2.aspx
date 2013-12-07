@@ -9,16 +9,15 @@
 <body>
     <form id="form1" runat="server">
         <p>
-            <asp:Label ID="Label1" runat="server" Text="ViewState"></asp:Label>
-&nbsp;&nbsp;<asp:Label ID="LabelViewState" runat="server"></asp:Label>
+&nbsp;<asp:Label ID="LabelViewState" runat="server"></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label2" runat="server" Text="Cookie"></asp:Label>
+            <asp:Label ID="LabelCookie" runat="server"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label3" runat="server" Text="Query"></asp:Label>
+            <asp:Label ID="LabelQueryString" runat="server"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label4" runat="server" Text="Application"></asp:Label>
+            <asp:Label ID="LabelApplication" runat="server"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label5" runat="server" Text="Session"></asp:Label>
+            <asp:Label ID="LabelSession" runat="server"></asp:Label>
             <br />
             <br />
             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">HyperLink</asp:HyperLink>

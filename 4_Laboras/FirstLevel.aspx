@@ -25,7 +25,7 @@
             <tr>
                 <td style="width: 188px">&nbsp;</td>
                 <td>
-                    <asp:Button ID="CountButton" runat="server" Text="Skaičiuoti" OnClick="CountButton_Click1"/>
+                    <asp:Button ID="CountButton" runat="server" Text="Skaičiuoti" OnClick="CountButton_Click1" PostBackUrl="~/SecondLevel.aspx"/>
                 </td>
             </tr>
         </table>
