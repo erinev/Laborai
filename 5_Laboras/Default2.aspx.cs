@@ -49,14 +49,14 @@ public partial class Default2 : Page
 
     private void ProcessSessionClicks()
     {
-        Session["SessionCount"] = ((int)Session["SessionCount"] + 1);
+        Session["SessionCount"] = ((int) Session["SessionCount"] + 1);
         LabelSession.Text = string.Format("Session paspaudimai: {0}", Session["SessionCount"]);
     }
 
     private void ProcessApplicationClicks()
     {
         Application.Lock();
-        Application["ApplicationCount"] = ((int)Application["ApplicationCount"] + 1);
+        Application["ApplicationCount"] = ((int) Application["ApplicationCount"] + 1);
         Application.UnLock();
         LabelApplication.Text = string.Format("Application paspaudimai: {0}", Application["ApplicationCount"]);
     }

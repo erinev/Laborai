@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
-public partial class Spalvotas : System.Web.UI.MasterPage
+public partial class Spalvotas : MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (!string.IsNullOrEmpty(Session["SessionName"].ToString().Trim(' ')))
+        {
+            LabelSpalvotasMaster.Text = string.Format("Labas, {0}", Session["SessionName"]);
+        }
     }
 }

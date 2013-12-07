@@ -3,28 +3,30 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <asp:ContentPlaceHolder id="head" runat="server">
-    </asp:ContentPlaceHolder>
-</head>
-<body bgcolor="yellow">
-    <form id="form1" runat="server">
-    <div>
-        <asp:Image ID="Image1" runat="server" ImageUrl="~/img/spalvotas.png" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Default</asp:HyperLink>
-&nbsp;&nbsp;&nbsp;
-        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Default2.aspx">Default2</asp:HyperLink>
-        <br />
-        <asp:Label ID="LabelSpalvotasMaster" runat="server"></asp:Label>
-        <br />
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
+    <head runat="server">
+        <title></title>
+        <asp:ContentPlaceHolder id="head" runat="server">
         </asp:ContentPlaceHolder>
-        <asp:Label ID="LabelCopyright" runat="server" Text="Copyright by Erikas Neverdauskas IFB-0 gr."></asp:Label>
-        <br />
-    </div>
-    </form>
-</body>
+    </head>
+    <body bgcolor="yellow">
+        <form id="form1" runat="server">
+            <div>
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/img/spalvotas.png" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Default</asp:HyperLink>
+                &nbsp;&nbsp;&nbsp;
+                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Default2.aspx">Default2</asp:HyperLink>
+                <br />
+                <asp:Label ID="LabelSpalvotasMaster" runat="server"></asp:Label>
+                <br />
+                <br />
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                </asp:ContentPlaceHolder>
+                <br />
+                <asp:Label ID="LabelCopyright" runat="server" Text="Copyright by Erikas Neverdauskas IFB-0 gr."></asp:Label>
+                <br />
+            </div>
+        </form>
+    </body>
 </html>
