@@ -69,6 +69,28 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "4_Laboras", "http://localho
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "5_Laboras", "http://localhost:7410", "{8AA4C00D-F4DE-4889-BBF1-B4A339618731}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_7410"
+		Debug.AspNetCompiler.PhysicalPath = "5_Laboras\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7410\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_7410"
+		Release.AspNetCompiler.PhysicalPath = "5_Laboras\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7410\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "5_Laboras\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +109,10 @@ Global
 		{6482B786-7907-4CC7-B245-FB56FBFC698D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6482B786-7907-4CC7-B245-FB56FBFC698D}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{6482B786-7907-4CC7-B245-FB56FBFC698D}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{8AA4C00D-F4DE-4889-BBF1-B4A339618731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AA4C00D-F4DE-4889-BBF1-B4A339618731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AA4C00D-F4DE-4889-BBF1-B4A339618731}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AA4C00D-F4DE-4889-BBF1-B4A339618731}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
