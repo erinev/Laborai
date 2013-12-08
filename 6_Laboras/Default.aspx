@@ -8,17 +8,17 @@
     </head>
     <body>
         <form id="form1" runat="server">
-        <div>
-            <asp:Image ID="Image1" runat="server" />
-            <br />
-            <br />
-            <asp:Label ID="LabelUsername" CssClass="label" runat="server" Text="Vartotojo vardas:"></asp:Label>
-            <br />
-            <asp:TextBox ID="TextBoxUsername" CssClass="textbox" runat="server"></asp:TextBox>
-            <br />
-            <br />
-            <asp:Button ID="ButtonLogin" CssClass="button" runat="server" Text="Login" />
-        </div>
+            <div>
+                <asp:Image ID="Image1" runat="server" />
+                <br />
+                <br />
+                <asp:Label ID="LabelUsername" CssClass="label" runat="server" Text="Vartotojo vardas:"></asp:Label>
+                <br />
+                <asp:TextBox ID="TextBoxUsername" CssClass="textbox" runat="server"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Button ID="ButtonLogin" CssClass="button" runat="server" Text="Login" OnClick="ButtonLogin_Click" />
+            </div>
         </form>
     </body>
 </html>
