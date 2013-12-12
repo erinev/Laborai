@@ -157,6 +157,28 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "8_Laboras(1)", "http://loca
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "9_Laboras", "http://localhost:31776", "{B7B71AB8-30C2-4C7C-80F2-4CE178C075CB}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_31776"
+		Debug.AspNetCompiler.PhysicalPath = "9_Laboras\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_31776\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_31776"
+		Release.AspNetCompiler.PhysicalPath = "9_Laboras\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_31776\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "9_Laboras\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -191,6 +213,10 @@ Global
 		{7BD22637-66B8-4D09-97BC-887AB7567DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BD22637-66B8-4D09-97BC-887AB7567DAE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{7BD22637-66B8-4D09-97BC-887AB7567DAE}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{B7B71AB8-30C2-4C7C-80F2-4CE178C075CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7B71AB8-30C2-4C7C-80F2-4CE178C075CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7B71AB8-30C2-4C7C-80F2-4CE178C075CB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7B71AB8-30C2-4C7C-80F2-4CE178C075CB}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
