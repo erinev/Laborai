@@ -66,6 +66,20 @@
                     <SortedDescendingHeaderStyle BackColor="#275353" />
                 </asp:GridView>
                 <br />
+                <asp:GridView ID="GridView2" runat="server" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
+                    <FooterStyle BackColor="White" ForeColor="#333333" />
+                    <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="White" ForeColor="#333333" />
+                    <SelectedRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                    <SortedAscendingHeaderStyle BackColor="#487575" />
+                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                    <SortedDescendingHeaderStyle BackColor="#275353" />
+                </asp:GridView>
+                <asp:Button ID="ButtonAtrinkti" runat="server" OnClick="ButtonAtrinkti_Click" Text="Atrinkti" Width="101px" />
+                <asp:Button ID="ButtonModifikuoti" runat="server" OnClick="ButtonModifikuoti_Click" Text="Modifikuoti" Width="105px" />
+                <br />
     
             </div>
         </form>
