@@ -6,12 +6,14 @@ public partial class U2 : Page
 {
     private const string A2Ofisas = "2A";
     private const string B2Ofisas = "2B";
+    private const string C2Ofisas = "2C";
 
     protected void Page_Load(object sender, EventArgs e)
     {
         OfisasImageMap.HotSpotMode = HotSpotMode.PostBack;
         OfisasImageMap.HotSpots.Add(Create2ARegion());
         OfisasImageMap.HotSpots.Add(Create2BRegion());
+        OfisasImageMap.HotSpots.Add(Create2CRegion());
     }
 
     private HotSpot Create2ARegion()
@@ -33,6 +35,18 @@ public partial class U2 : Page
             Right = 50,
             Top = 60,
             PostBackValue = B2Ofisas
+        };
+        return region;
+    }
+
+    private HotSpot Create2CRegion()
+    {
+        var region = new RectangleHotSpot
+        {
+            Left = 196,
+            Right = 100,
+            Top = 60,
+            PostBackValue = C2Ofisas
         };
         return region;
     }

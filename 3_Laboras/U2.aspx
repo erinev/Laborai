@@ -9,7 +9,7 @@
     <body>
         <form id="form1" runat="server">
             <div>
-                <asp:Wizard ID="AntrasLaborasWizard" runat="server" Height="250px" style="margin-bottom: 0px" Width="425px" ActiveStepIndex="1" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" OnActiveStepChanged="AntrasLaborasWizard_ActiveStepChanged" OnFinishButtonClick="Wizard1_FinishButtonClick">
+                <asp:Wizard ID="AntrasLaborasWizard" runat="server" Height="250px" style="margin-bottom: 0px" Width="425px" ActiveStepIndex="0" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" OnActiveStepChanged="AntrasLaborasWizard_ActiveStepChanged" OnFinishButtonClick="Wizard1_FinishButtonClick">
                     <HeaderStyle BackColor="#5D7B9D" BorderStyle="Solid" Font-Bold="True" Font-Size="0.9em" ForeColor="White" HorizontalAlign="Left" />
                     <NavigationButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284775" />
                     <SideBarButtonStyle BorderWidth="0px" Font-Names="Verdana" ForeColor="White" />
@@ -21,6 +21,9 @@
                             <br />
                             Pasirinktas ofisas:
                             <asp:Label ID="PasirinktasOfisasLabel" runat="server"></asp:Label>
+                        </asp:WizardStep>
+                        <asp:WizardStep runat="server" Title="Gynimas">
+                            <asp:Label ID="Label1" runat="server" Text="Gynimas"></asp:Label>
                         </asp:WizardStep>
                         <asp:WizardStep ID="DataWizardStep" runat="server" Title="Inventorizacijos data">Pasirinkite inventorizacijos data:<br />
                             <asp:Calendar ID="InventorizacijosCalendar" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Width="200px">

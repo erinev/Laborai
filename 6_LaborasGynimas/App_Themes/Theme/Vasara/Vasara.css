@@ -1,0 +1,22 @@
+﻿body {
+    background-color: rgb(185, 247, 185);
+    font-family: fantasy;
+}
+
+.label {
+    left: 10px;
+    position: fixed;
+    top: 250px;
+}
+
+.textbox {
+    left: 10px;
+    position: fixed;
+    top: 270px;
+}
+
+.button {
+    left: 10px;
+    position: fixed;
+    top: 300px;
+}
