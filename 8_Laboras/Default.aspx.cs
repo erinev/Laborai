@@ -7,6 +7,7 @@ public partial class Default : Page
 {
     private static readonly string ConnString =
         ConfigurationManager.ConnectionStrings["NorthwindConnectionString"].ToString();
+
     private readonly SqlConnection _conn = new SqlConnection(ConnString);
 
     protected void Page_Load(object sender, EventArgs e)
